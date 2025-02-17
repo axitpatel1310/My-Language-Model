@@ -40,7 +40,7 @@ print("Model loaded in 4-bit successfully!")
 from huggingface_hub import login
 login("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")
 
-prompt = "What is the meaning of life?"
+prompt = "What exactly is behavioral economics? and what are the attributes to it"
 inputs = tokenizer(prompt, return_tensors="pt").to("cuda")  # Move to GPU if available
 output = model.generate(**inputs, max_new_tokens=100)
 print(tokenizer.decode(output[0], skip_special_tokens=True))
